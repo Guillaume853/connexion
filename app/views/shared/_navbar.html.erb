@@ -42,6 +42,11 @@
               <% end %>
             </li>
             <li>
+              <%= link_to new_event_path do %>
+                <i class="fa fa-upload"></i>  <%= t(".profile", default: "create an event") %>
+              <% end %>
+            </li>
+            <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
                 <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
               <% end %>
@@ -58,7 +63,9 @@
     <% end %>
 
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <% if user_signed_in? %>
+      <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <% end %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->

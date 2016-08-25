@@ -1,0 +1,20 @@
+<div class="padded"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h1 class="text-center">
+        Your new event for has been successfully uploaded !
+      </h1>
+      <ul>
+        <li>
+          <p>type: <%= @event.address %></p>
+        </li>
+        <li>
+          <p>address: <%= @event.address %></p>
+      </ul>
+      <p class="text-center">
+        <%= link_to "View event Description", event_path(@event), class: "btn btn-success" %>
+      </p>
+    </div>
+  </div>
+</div>

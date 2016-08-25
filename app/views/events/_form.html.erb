@@ -1,0 +1,9 @@
+
+<%= simple_form_for @event do |f| %>
+  <%= f.input :name, placeholder: "My birthday party", error: 'Event name is mandatory, please specify one' %>
+  <%= f.input :address, placeholder: "133 avenue du Faubourg Saint-Honoré", label:"Address" %>
+  <%= f.input :date, label:"date" %>
+  <%= f.input :description, placeholder: "No flowers please !", label:"Description" %>
+  <%= f.button :submit, "Submit", class: "btn btn-primary" %>
+<% end %>
+
